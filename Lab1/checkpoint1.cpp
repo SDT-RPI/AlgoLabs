@@ -42,7 +42,7 @@ int binSearch(int* searchArray, int lookup, int max){
  while(min <= max){
 
 	// Find the current midpoint in search range
-	mid = (min+max)/2;
+	mid = (min+((max-min))/2);
 	
 
 	// Check if the value we want is higher or lower than
