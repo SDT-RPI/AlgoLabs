@@ -1,0 +1,24 @@
+# # # # Lab 1 Binary Search Pseudocode # # # #
+
+- Given a sorted data structure, we wish to find if search criteria
+  is contained within it.
+
+1: Find last and first element of data structure, assign
+  min and max values to their indices
+
+2: Find middle index of current list: mid = (max-min)/2
+	If max-min is even, subtract 1 from min (Index starts from 0)
+	If odd do nothing (integer division fixes this for us)
+
+3: Check search criteria against datastructure[mid]
+	If search criteria is greater than datastructure[mid]:
+		min = mid
+	If search criteria is less than datastructure[mid]:
+		max = mid
+	If search criteria equals datastructure[mid]:
+		We've found what we're looking for, end.
+
+4: If mid = 0, end - the search criteria is not contained
+   within this list, else go to 5
+   
+5: Repeat from step 2 until end condition is met
